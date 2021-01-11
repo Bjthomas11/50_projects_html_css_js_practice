@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+:root {
+  --primary-bk-color: #22254b;
+  --secondary-bk-color: #373b69;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-bk-color);
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-bk-color);
+  align-items: center;
+}
+
+header h1 {
+  color: #fff;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-bk-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-optical-sizing: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-bk-color);
+  transition: all 0.2s ease-in;
+}
+
+.search::placeholder {
+  color: #7378c5;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-bk-color);
+  padding: 1rem;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.movie img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  padding-left: 0;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.movie-info span {
+  background-color: var(--primary-bk-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+  overflow: scroll;
+}
